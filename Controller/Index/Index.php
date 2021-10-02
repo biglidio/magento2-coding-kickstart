@@ -2,9 +2,9 @@
 
 namespace Biglidio\BestSelling\Controller\Index;
 
-use Magento\Framework\App\Action\Action;
+use Magento\Framework\App\Action\HttpGetActionInterface;
 
-class Index extends Action
+class Index implements HttpGetActionInterface
 {
     public function execute()
     {
