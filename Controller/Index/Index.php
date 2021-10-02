@@ -2,12 +2,15 @@
 
 namespace Biglidio\BestSelling\Controller\Index;
 
-use Magento\Framework\App\Action\HttpGetActionInterface;
+use Magento\Framework\App\Action\Action;
+use Magento\Framework\Controller\ResultFactory;
 
-class Index implements HttpGetActionInterface
+class Index extends Action
 {
     public function execute()
     {
-        die('Biglidio - Best Selling - Index');
+        $result = $this->resultFactory->create(ResultFactory::TYPE_RAW);
+        $result->setContents('Index');
+        return $result;
     }
 }
