@@ -5,6 +5,9 @@
             <action method="setPageTitle">
                 <argument name="pageTitle" xsi:type="string" translate="true">Biglidio - Best Selling</argument>
             </action>
+            <arguments>
+                <argument name="css_class" xsi:type="string">cms-content-important</argument>
+            </arguments>
         </referenceBlock>
         <referenceContainer name="content">
             <block name="bestselling.description" template="Biglidio_BestSelling::description.phtml"/>
