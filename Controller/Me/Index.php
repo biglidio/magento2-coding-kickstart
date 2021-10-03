@@ -22,6 +22,11 @@ class Index extends Action
     {
         $result = $this->resultFactory->create(ResultFactory::TYPE_RAW);
         $customerId = $this->customerSession->getCustomerId();
+
+        $this->_eventManager->dispatch('customer_views_bestselling_me_index', [
+            'customer_id' => $customerId,
+        ]);
+
         $result->setContents("customer_id: $customerId");
         return $result;
     }
