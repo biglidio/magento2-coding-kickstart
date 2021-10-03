@@ -10,7 +10,13 @@
             </arguments>
         </referenceBlock>
         <referenceContainer name="content">
-            <block name="bestselling.description" template="Biglidio_BestSelling::description.phtml"/>
+            <container htmlTag="div" htmlId="description-container">
+                <block name="bestselling.description" template="Biglidio_BestSelling::description.phtml">
+                    <block name="bestselling.extra1" template="Biglidio_BestSelling::description-extra.phtml" />
+                    <block name="bestselling.extra2" template="Biglidio_BestSelling::description-extra.phtml" />
+                    <block name="bestselling.extra3" template="Biglidio_BestSelling::description-extra.phtml" />
+                </block>
+            </container>
         </referenceContainer>
         <move element="wishlist_sidebar" destination="sidebar.additional" before="-"/>
         <referenceContainer name="catalog.compare.sidebar" remove="true"/>
