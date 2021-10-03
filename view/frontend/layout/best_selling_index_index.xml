@@ -6,5 +6,6 @@
         </referenceContainer>
         <move element="wishlist_sidebar" destination="sidebar.additional" before="-"/>
         <referenceContainer name="catalog.compare.sidebar" remove="true"/>
+        <referenceBlock name="wishlist_sidebar" template="Biglidio_BestSelling::wishlist/sidebar.phtml"/>
     </body>
 </page>
