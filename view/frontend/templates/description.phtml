@@ -1,3 +1,7 @@
-<?php /** @var $block \Magento\Framework\View\Element\Template */ ?>
-<p><?= __('This is a description') ?></p>
+<?php 
+/** @var $block \Magento\Framework\View\Element\Template */ 
+/** @var \Biglidio\BestSelling\Controller\ViewModel\Description $descriptionViewModel */
+$descriptionViewModel = $block->getDescriptionViewModel();
+?>
+<p><?= $descriptionViewModel->getWithWordCount() ?></p>
 <?= $block->getChildHtml() ?>

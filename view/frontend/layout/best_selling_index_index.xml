@@ -12,6 +12,9 @@
         <referenceContainer name="content">
             <container htmlTag="div" htmlId="description-container">
                 <block name="bestselling.description" template="Biglidio_BestSelling::description.phtml">
+                <arguments>
+                    <argument name="description_view_model" xsi:type="object">Biglidio\BestSelling\ViewModel\Description</argument>
+                </arguments>
                     <block name="bestselling.extra1" template="Biglidio_BestSelling::description-extra.phtml" />
                     <block name="bestselling.extra2" template="Biglidio_BestSelling::description-extra.phtml" />
                     <block name="bestselling.extra3" template="Biglidio_BestSelling::description-extra.phtml" />
