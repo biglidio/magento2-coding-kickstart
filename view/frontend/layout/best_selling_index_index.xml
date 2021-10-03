@@ -4,5 +4,6 @@
         <referenceContainer name="content">
             <block name="bestselling.description" template="Biglidio_BestSelling::description.phtml"/>
         </referenceContainer>
+        <move element="wishlist_sidebar" destination="sidebar.additional" before="-"/>
     </body>
 </page>
