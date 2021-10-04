@@ -31,6 +31,8 @@ class Index extends Action
 
         /** @var BestsellersCollection $bestsellersCollectionFactory */
         $bestsellersCollectionFactory = $this->bestsellersCollectionFactory->create();
+        $firstItem = $bestsellersCollectionFactory->getFirstItem();
+        $allItems = $bestsellersCollectionFactory->getItems();
 
         $result->setContents("category_id: $categoryId, limit: $limit");
         return $result;
