@@ -31,6 +31,9 @@ class Index extends Action
 
         /** @var BestsellersCollection $bestsellersCollectionFactory */
         $bestsellersCollectionFactory = $this->bestsellersCollectionFactory->create();
+        $filteredBestsellersCollection = $bestsellersCollectionFactory->addFieldToFilter('qty_ordered', [
+            'gt' => 1,
+        ]);
         $firstItem = $bestsellersCollectionFactory->getFirstItem();
         $allItems = $bestsellersCollectionFactory->getItems();
 
